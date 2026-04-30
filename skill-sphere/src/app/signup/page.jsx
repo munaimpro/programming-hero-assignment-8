@@ -35,8 +35,8 @@ const SignupPage = () => {
     const { register, handleSubmit, formState: { errors }, } = useForm();
 
     return (
-        <div className='container mx-auto min-h-[80vh] flex justify-center items-center bg-base-200 py-10'>
-            <div className='p-10 rounded-xl bg-white'>
+        <div className='container mx-auto min-h-[80vh] flex justify-center items-center py-10'>
+            <div className='p-10 rounded-xl border-2 border-base-300 bg-white'>
                 <h3 className='font-bold text-3xl text-center mb-6 text-[#082a5e]'>Signup your account</h3>
                 
                 <div className='divider'></div>

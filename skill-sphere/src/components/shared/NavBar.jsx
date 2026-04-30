@@ -27,7 +27,7 @@ const NavBar = () => {
                             {links}
                         </ul>
                     </div>
-                    <Link className="text-3xl font-bold" href={'/'}>SkillSphere</Link>
+                    <Link className="text-3xl font-bold text-[#082a5e]" href={'/'}>SkillSphere</Link>
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">

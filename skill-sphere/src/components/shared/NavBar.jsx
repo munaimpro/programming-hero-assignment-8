@@ -1,4 +1,8 @@
+'use client'
+import { authClient } from "@/lib/auth-client";
+import Image from "next/image";
 import Link from "next/link";
+import userAvater from '@/assets/avater.webp';
 
 const links = <>
     <li>
@@ -13,6 +17,11 @@ const links = <>
 </>
 
 const NavBar = () => {
+
+    const { data: session, isPending } = authClient.useSession();
+    const user = session?.user;
+    console.log(user);
+
     return (
         <div className="navbar bg-base-100 shadow-sm">
             <div className="container mx-auto flex">
@@ -35,8 +44,23 @@ const NavBar = () => {
                     </ul>
                 </div>
                 <div className="navbar-end gap-2">
-                    <Link className="btn btn-outline btn-primary shadow-none" href={'/login'}>Login</Link>
-                    <Link className="btn btn-primary shadow-none" href={'/signup'}>Signup</Link>
+                    {
+                        isPending ? (
+                            <span className="loading loading-dots loading-lg"></span>
+                        ) : user ? (
+                            <>
+                                <Image className="rounded-full" src={user?.image || userAvater} alt={user?.name || "User"} width={40} height={40} />
+                                
+                                    <Link onClick={async () => await authClient.signOut() } className="btn btn-primary shadow-none" href={'/login'}>Logout</Link>
+                            </>
+                        ): (
+                            <>
+                                <Link className="btn btn-outline btn-primary shadow-none" href={'/login'}>Login</Link>
+                                <Link className="btn btn-primary shadow-none" href={'/signup'}>Signup</Link>
+                            </>  
+                        )
+                    }
+                    
                 </div>
             </div>
         </div>

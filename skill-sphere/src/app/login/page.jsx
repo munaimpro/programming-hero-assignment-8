@@ -1,9 +1,13 @@
 'use client'
 import { authClient } from "@/lib/auth-client";
+import { Eye, EyeClosed, Google } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 const LoginPage = () => {
+
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleLoginSubmit = async (data) => {
         const { email, password } = data;
@@ -26,6 +30,14 @@ const LoginPage = () => {
 
     const { register, handleSubmit, formState: { errors }, } = useForm();
 
+    const handleGoogleSignin = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+
+        console.log(data);
+    }
+
     return (
         <div className='container mx-auto min-h-[80vh] flex justify-center items-center bg-base-200 py-10'>
             <div className='p-10 rounded-xl bg-white'>
@@ -40,14 +52,28 @@ const LoginPage = () => {
                         {errors.email && <span className="text-red-600">{errors.email.message}</span>}
                     </fieldset>
 
-                    <fieldset className="fieldset">
+                    <fieldset className="fieldset relative">
                         <legend className="fieldset-legend">Password</legend>
-                        <input type="password" className="input" placeholder="Type password" {...register("password", { required: "Password is required" })} />
+                        <input type={showPassword ? "text" : "password"} className="input" placeholder="Type password" {...register("password", { required: "Password is required" })} />
+                        <span className="absolute right-2 top-3" onClick={() => { setShowPassword(!showPassword) }}>
+                            {showPassword ? (
+                                <Eye></Eye>
+                            ) : (
+                                <EyeClosed></EyeClosed> 
+                            )
+                        }
+                        </span>
                         {errors.password && <span className="text-red-600">{errors.password.message}</span>}
                     </fieldset>
 
                     <button className='btn btn-block btn-primary shadow-none'>Login</button>
+                    
                 </form>
+
+                <button onClick={() => handleGoogleSignin()} className='btn btn-block btn-outline btn-primary shadow-none mt-4'>
+                    {/* <Google/> */}
+                    Login with Google
+                </button>
 
                 <p className='py-6 text-[16px] text-[#39557e] mt-6'>
                     Don&apos;t have an account?

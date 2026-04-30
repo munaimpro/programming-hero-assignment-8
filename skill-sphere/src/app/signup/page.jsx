@@ -2,8 +2,12 @@
 import { authClient } from "@/lib/auth-client";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
+import { Eye, EyeClosed } from "lucide-react";
+import { useState } from "react";
 
 const SignupPage = () => {
+
+    const [showPassword, setShowPassword] = useState(false);
 
     const handleRegisterSubmit = async (data) => {
         const { name, email, photo, password } = data;
@@ -56,9 +60,17 @@ const SignupPage = () => {
                         {errors.email && <span className="text-red-600">{errors.email.message}</span>}
                     </fieldset>
 
-                    <fieldset className="fieldset">
+                    <fieldset className="fieldset relative">
                         <legend className="fieldset-legend">Password</legend>
-                        <input type="password" className="input" placeholder="Type password" {...register("password", { required: "Password is required" })} />
+                        <input type={showPassword ? "text" : "password"} className="input" placeholder="Type password" {...register("password", { required: "Password is required" })} />
+                        <span className="absolute right-2 top-3" onClick={() => { setShowPassword(!showPassword) }}>
+                            {showPassword ? (
+                                <Eye></Eye>
+                            ) : (
+                                <EyeClosed></EyeClosed>
+                            )
+                            }
+                        </span>
                         {errors.password && <span className="text-red-600">{errors.password.message}</span>}
                     </fieldset>
 

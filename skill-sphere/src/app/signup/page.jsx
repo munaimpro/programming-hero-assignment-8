@@ -5,6 +5,7 @@ import { useForm } from "react-hook-form";
 import { Eye, EyeClosed } from "lucide-react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { FcGoogle } from "react-icons/fc";
 
 const SignupPage = () => {
     const router = useRouter();
@@ -86,13 +87,18 @@ const SignupPage = () => {
                         {errors.password && <span className="text-red-600">{errors.password.message}</span>}
                     </fieldset>
 
-                    <button className='btn btn-block btn-primary shadow-none'>Signup</button>
+                    <button className='btn btn-block btn-primary shadow-none'>Sign Up</button>
                 </form>
 
                 <button onClick={() => handleGoogleSignin()} className='btn btn-block btn-outline btn-primary shadow-none mt-4'>
-                    {/* <Google/> */}
-                    Login with Google
+                    <FcGoogle className="mr-2 h-5 w-5" />
+                    Sign In with Google
                 </button>
+
+                <p className='py-6 text-[16px] text-[#39557e] mt-6'>
+                    Already have an account?
+                    <Link className="text-[#082a5e] font-bold" href={'/login'}> Sign In</Link>
+                </p>
             </div>
         </div>
     );

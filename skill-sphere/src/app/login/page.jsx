@@ -1,10 +1,11 @@
 'use client'
 import { authClient } from "@/lib/auth-client";
-import { Eye, EyeClosed, Google } from "lucide-react";
+import { Eye, EyeClosed } from "lucide-react";
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { FcGoogle } from "react-icons/fc";
 
 const LoginPage = () => {
     const searchParams = useSearchParams();
@@ -70,18 +71,18 @@ const LoginPage = () => {
                         {errors.password && <span className="text-red-600">{errors.password.message}</span>}
                     </fieldset>
 
-                    <button className='btn btn-block btn-primary shadow-none'>Login</button>
+                    <button className='btn btn-block btn-primary shadow-none'>Sign In</button>
                     
                 </form>
 
                 <button onClick={() => handleGoogleSignin()} className='btn btn-block btn-outline btn-primary shadow-none mt-4'>
-                    {/* <Google/> */}
-                    Login with Google
+                    <FcGoogle className="mr-2 h-5 w-5" />
+                    Sign In with Google
                 </button>
 
                 <p className='py-6 text-[16px] text-[#39557e] mt-6'>
                     Don&apos;t have an account?
-                    <Link className="text-[#082a5e] font-bold" href={'/signup'}> Signup</Link>
+                    <Link className="text-[#082a5e] font-bold" href={'/signup'}>Sign Up</Link>
                 </p>
             </div>
         </div>

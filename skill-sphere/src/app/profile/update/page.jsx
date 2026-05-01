@@ -46,7 +46,7 @@ const ProfilePage = () => {
                         {errors.photo && <span className="text-red-600">{errors.photo.message}</span>}
                     </fieldset>
 
-                    <button className='btn btn-block btn-primary shadow-none'>Update</button>
+                    <button className='btn btn-block btn-primary shadow-none'>Update Information</button>
                 </form>
             </div>
         </div>

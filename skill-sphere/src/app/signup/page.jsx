@@ -4,8 +4,10 @@ import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { Eye, EyeClosed } from "lucide-react";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 
 const SignupPage = () => {
+    const router = useRouter();
 
     const [showPassword, setShowPassword] = useState(false);
 
@@ -18,10 +20,10 @@ const SignupPage = () => {
             email: email, // required
             password: password, // required
             image: photo,
-            callbackURL: "/",
+            callbackURL: "/login",
         });
 
-        console.log(res, error)
+        // console.log(res, error)
 
         if (error) {
             alert(error.message);
@@ -29,6 +31,8 @@ const SignupPage = () => {
 
         if (res) {
             alert("Signup successfull");
+            router.push("/");
+            router.refresh();
         }
     }
 

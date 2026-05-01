@@ -19,6 +19,9 @@ const NavBar = () => {
         <li>
             <NavLink href={'/course'}>Courses</NavLink>
         </li>
+        <li>
+            <NavLink href={'/profile'}>My Profile</NavLink>
+        </li>
     </>
 
     return (
@@ -39,22 +42,7 @@ const NavBar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        {
-                            user ? (
-                                <>
-                                    {links}
-                                    <li>
-                                        <NavLink href={'/profile'}>My Profile</NavLink>
-                                    </li>
-                                </>
-                            ): (
-                                <>
-                                    {links}
-                                </>   
-                            )
-                            
-                            
-                        }
+                        {links}
                     </ul>
                 </div>
                 <div className="navbar-end gap-2">

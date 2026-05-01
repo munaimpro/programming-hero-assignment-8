@@ -2,11 +2,14 @@
 import { authClient } from "@/lib/auth-client";
 import { Eye, EyeClosed, Google } from "lucide-react";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 
 const LoginPage = () => {
-
+    const searchParams = useSearchParams();
+    // const router = userRouter();
+    const callbackUrl = searchParams.get("callbackUrl") || "/";
     const [showPassword, setShowPassword] = useState(false);
 
     const handleLoginSubmit = async (data) => {
@@ -16,7 +19,7 @@ const LoginPage = () => {
             email: email, // required
             password: password, // required
             rememberMe: true,
-            callbackURL: "/",
+            callbackURL: callbackUrl,
         });
 
         if (error) {
@@ -33,6 +36,7 @@ const LoginPage = () => {
     const handleGoogleSignin = async () => {
         const data = await authClient.signIn.social({
             provider: "google",
+            callbackURL: callbackUrl,
         });
 
         // console.log(data);

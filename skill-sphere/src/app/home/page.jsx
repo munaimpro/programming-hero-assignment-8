@@ -1,7 +1,6 @@
 import Hero from "@/components/Hero";
 import TopCourse from "@/components/TopCourse";
 import LearningTips from "@/components/LearningTips";
-import TopInstructor from "@/components/TopInstructor";
 import Instructors from "@/components/Instructors";
 
 

@@ -7,7 +7,7 @@
         "rating": 4.8,
         "level": "Beginner",
         "description": "Learn HTML, CSS, JavaScript, React, Node.js, and databases to become a full-stack developer.",
-        "image": "https://i.postimg.cc/8Cw1ZK7R/web-dev.jpg",
+        "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
         "category": "Development"
     },
     {
@@ -18,7 +18,7 @@
         "rating": 4.9,
         "level": "Advanced",
         "description": "Deep dive into React, hooks, performance optimization, and Next.js App Router.",
-        "image": "https://i.postimg.cc/3xXb6b7Q/react.jpg",
+        "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee",
         "category": "Development"
     },
     {
@@ -29,7 +29,7 @@
         "rating": 4.6,
         "level": "Beginner",
         "description": "Understand design principles, wireframing, and user-centered design techniques.",
-        "image": "https://i.postimg.cc/Nj9kY1k9/uiux.jpg",
+        "image": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e",
         "category": "Design"
     },
     {
@@ -40,7 +40,7 @@
         "rating": 4.7,
         "level": "Intermediate",
         "description": "Master digital design tools and create stunning graphics and branding assets.",
-        "image": "https://i.postimg.cc/7h2G5Y3k/design.jpg",
+        "image": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d",
         "category": "Design"
     },
     {
@@ -51,7 +51,7 @@
         "rating": 4.5,
         "level": "Beginner",
         "description": "Learn SEO, social media marketing, and online advertising strategies.",
-        "image": "https://i.postimg.cc/2y9s1cYw/marketing.jpg",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
         "category": "Marketing"
     },
     {
@@ -62,7 +62,7 @@
         "rating": 4.4,
         "level": "Intermediate",
         "description": "Improve website ranking and traffic using modern SEO and content strategies.",
-        "image": "https://i.postimg.cc/FKkR3bVX/seo.jpg",
+        "image": "https://images.unsplash.com/photo-1557838923-2985c318be48",
         "category": "Marketing"
     },
     {
@@ -73,7 +73,7 @@
         "rating": 4.8,
         "level": "Intermediate",
         "description": "Analyze data, visualize insights, and build machine learning models with Python.",
-        "image": "https://i.postimg.cc/4xJt8K5M/python.jpg",
+        "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
         "category": "Data Science"
     },
     {
@@ -84,7 +84,7 @@
         "rating": 4.9,
         "level": "Advanced",
         "description": "Comprehensive course on machine learning algorithms, models, and real-world applications.",
-        "image": "https://i.postimg.cc/6qk1r9zP/ml.jpg",
+        "image": "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d",
         "category": "Data Science"
     },
     {
@@ -95,7 +95,7 @@
         "rating": 4.7,
         "level": "Intermediate",
         "description": "Build cross-platform mobile apps using Flutter and Dart.",
-        "image": "https://i.postimg.cc/mrYxJ5v7/flutter.jpg",
+        "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c",
         "category": "Development"
     },
     {
@@ -106,7 +106,7 @@
         "rating": 4.5,
         "level": "Beginner",
         "description": "Understand cybersecurity fundamentals, threats, and protection techniques.",
-        "image": "https://i.postimg.cc/zGJ5nZrS/security.jpg",
+        "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
         "category": "Security"
     },
     {
@@ -117,7 +117,7 @@
         "rating": 4.6,
         "level": "Intermediate",
         "description": "Learn cloud infrastructure, deployment, and services using AWS.",
-        "image": "https://i.postimg.cc/Yq3T2J5z/aws.jpg",
+        "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
         "category": "Cloud"
     },
     {
@@ -128,7 +128,7 @@
         "rating": 4.3,
         "level": "Beginner",
         "description": "Boost productivity with effective time management and focus strategies.",
-        "image": "https://i.postimg.cc/5Nq8nQhM/productivity.jpg",
+        "image": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe",
         "category": "Personal Development"
     }
 ]

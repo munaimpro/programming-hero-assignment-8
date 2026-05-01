@@ -6,7 +6,6 @@ const TopCourse = async () => {
     const response = await fetch('https://skill-sphere-munaimpro.vercel.app/course.json');
     const courses = await response.json();
     const topCourses = [...courses].sort((a, b) => b.rating - a.rating).slice(0, 3);
-    // console.log(topCourses);
 
     return (
         <div className='container mx-auto pt-25'>

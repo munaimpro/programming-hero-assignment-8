@@ -1,5 +1,6 @@
 import Hero from "@/components/Hero";
 import TopCourse from "@/components/TopCourse";
+import LearningTips from "@/components/LearningTips";
 
 
 const HomePage = () => {
@@ -7,6 +8,7 @@ const HomePage = () => {
         <div>
             <Hero></Hero>
             <TopCourse></TopCourse>
+            <LearningTips></LearningTips>
         </div>
     );
 };

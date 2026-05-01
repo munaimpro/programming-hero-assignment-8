@@ -12,7 +12,7 @@ const TopCourse = async () => {
             {/* Section Heading */}
             <div className='mb-8'>
                 <h2 className="text-4xl font-bold text-[#082a5e]">Our <span className='text-[#422ad5]'>Featured</span> Courses</h2>
-                <p className="text-[#39557e] mt-2">Upgrade your skills with our most in-demand courses</p>
+                <p className="text-gray-500 mt-2">Upgrade your skills with our most in-demand courses</p>
             </div>
 
             {/* Section Content */}

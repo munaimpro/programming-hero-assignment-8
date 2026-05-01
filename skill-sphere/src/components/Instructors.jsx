@@ -42,7 +42,7 @@ const Instructors = () => {
             <div className="flex justify-between items-end mb-12">
                 <div>
                     <h2 className="text-3xl md:text-4xl font-bold text-[#082a5e] mb-2">Master <span className='text-[#422ad5]'>Tech</span> with Experts</h2>
-                    <p className="text-[#39557e]">
+                    <p className="text-gray-500">
                         Learn directly from industry leaders who are building<br/> the future of the web and beyond.
                     </p>
                 </div>

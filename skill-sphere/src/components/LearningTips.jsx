@@ -7,7 +7,7 @@ const LearningTips = () => {
             {/* Section Heading */}
             <div className='mb-8 text-center'>
                 <h2 className="text-4xl font-bold text-[#082a5e]">Learning <span className='text-[#422ad5]'>Tips</span></h2>
-                <p className="text-[#39557e] mt-2">Boost your productivity with smart learning strategies</p>
+                <p className="text-gray-500 mt-2">Boost your productivity with smart learning strategies</p>
             </div>
 
             {/* Section Content */}

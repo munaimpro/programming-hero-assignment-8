@@ -11,7 +11,7 @@ const Hero = () => {
                     <Image src={bannerImage} alt="Banner"></Image>
                     <div className='w-full lg:w-2xl'>
                         <h1 className="text-5xl font-bold text-[#082a5e]">Learn <span className='text-[#422ad5]'>Skills</span> From Our Top Instructors</h1>
-                        <p className="py-6 text-[16px] text-[#39557e]">
+                        <p className="py-6 text-[16px] text-gray-500">
                             Learn outstanding and on-demand skills from our best, and well-qualified instructors with outstanding guidelines.
                         </p>
                         <Link href={'/course'}>

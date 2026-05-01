@@ -1,4 +1,3 @@
-import React from 'react';
 import CourseCard from './CourseCard';
 
 const TopCourse = async () => {
@@ -17,11 +16,20 @@ const TopCourse = async () => {
 
             {/* Section Content */}
             <div className='grid grid-cols-1 lg:grid-cols-3 gap-8'>
-                {
-                    topCourses.map(course => {
-                        return <CourseCard key={course.id} course={course}></CourseCard>
-                    })
-                }
+                {topCourses.length === 0 ? (
+                    <div className="py-20 text-center col-span-3">
+                        <h2 className="text-2xl font-semibold text-gray-600">
+                            No courses available
+                        </h2>
+                        <p className="text-gray-400 mt-2">
+                            Try searching with a different keyword.
+                        </p>
+                    </div>
+                ) : (
+                    topCourses.map(course => (
+                    <CourseCard key={course.id} course={course} />
+                ))
+            )}
             </div>
         </div>
     );

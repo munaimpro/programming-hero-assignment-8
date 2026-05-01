@@ -18,7 +18,7 @@ const CoursePage = () => {
         fetchCourses();
     }, []);
 
-    // 🔥 FILTER LOGIC
+    // Filter on search
     const filteredCourses = courses.filter(course =>
         course.title.toLowerCase().includes(search.toLowerCase())
     );

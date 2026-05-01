@@ -34,6 +34,14 @@ const SignupPage = () => {
 
     const { register, handleSubmit, formState: { errors }, } = useForm();
 
+    const handleGoogleSignin = async () => {
+        const data = await authClient.signIn.social({
+            provider: "google",
+        });
+
+        // console.log(data);
+    }
+
     return (
         <div className='container mx-auto min-h-[80vh] flex justify-center items-center py-10'>
             <div className='p-10 rounded-xl border-2 border-base-300 bg-white'>
@@ -76,6 +84,11 @@ const SignupPage = () => {
 
                     <button className='btn btn-block btn-primary shadow-none'>Signup</button>
                 </form>
+
+                <button onClick={() => handleGoogleSignin()} className='btn btn-block btn-outline btn-primary shadow-none mt-4'>
+                    {/* <Google/> */}
+                    Login with Google
+                </button>
             </div>
         </div>
     );

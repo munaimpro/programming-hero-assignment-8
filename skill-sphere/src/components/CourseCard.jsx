@@ -6,7 +6,7 @@ const CourseCard = ({ course }) => {
         <div className="card bg-base-100 w-full shadow-sm">
             <figure>
                 <img src={course.image} alt={course.title} />
-                <div className="badge badge-soft badge-primary absolute top-3 right-3 rounded-full font-medium">{course.level}</div>
+                <div className="badge badge-soft badge-primary absolute top-3 right-3 rounded-full font-medium">{course.category}</div>
             </figure>
             <div className="card-body flex flex-col flex-grow">
                 <h2 className="card-title font-medium text-[#082a5e]">{course.title}</h2>

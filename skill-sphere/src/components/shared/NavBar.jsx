@@ -3,23 +3,23 @@ import { authClient } from "@/lib/auth-client";
 import Image from "next/image";
 import Link from "next/link";
 import userAvater from '@/assets/avater.webp';
+import NavLink from "./NavLink";
 
-const links = <>
-    <li>
-        <Link className="text-[#082a5e] text-[16px] font-medium" href={'/'}>Home</Link>
-    </li>
-    <li>
-        <Link className="text-[#082a5e] text-[16px] font-medium" href={'/course'}>Courses</Link>
-    </li>
-    <li>
-        <Link className="text-[#082a5e] text-[16px] font-medium" href={'/profile'}>My Profile</Link>
-    </li>
-</>
+
 
 const NavBar = () => {
 
     const { data: session, isPending } = authClient.useSession();
     const user = session?.user;
+
+    const links = <>
+        <li>
+            <NavLink href={'/'}>Home</NavLink>
+        </li>
+        <li>
+            <NavLink href={'/course'}>Courses</NavLink>
+        </li>
+    </>
 
     return (
         <div className="navbar bg-base-100 shadow-sm">
@@ -39,7 +39,22 @@ const NavBar = () => {
                 </div>
                 <div className="navbar-center hidden lg:flex">
                     <ul className="menu menu-horizontal px-1">
-                        {links}
+                        {
+                            user ? (
+                                <>
+                                    {links}
+                                    <li>
+                                        <NavLink href={'/profile'}>My Profile</NavLink>
+                                    </li>
+                                </>
+                            ): (
+                                <>
+                                    {links}
+                                </>   
+                            )
+                            
+                            
+                        }
                     </ul>
                 </div>
                 <div className="navbar-end gap-2">

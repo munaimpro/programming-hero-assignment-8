@@ -35,7 +35,7 @@ const LoginPage = () => {
             provider: "google",
         });
 
-        console.log(data);
+        // console.log(data);
     }
 
     return (

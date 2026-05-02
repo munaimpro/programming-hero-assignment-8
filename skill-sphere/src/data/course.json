@@ -1,0 +1,134 @@
+[
+    {
+        "id": 1,
+        "title": "Complete Web Development Bootcamp",
+        "instructor": "John Doe",
+        "duration": "20 hours",
+        "rating": 4.8,
+        "level": "Beginner",
+        "description": "Learn HTML, CSS, JavaScript, React, Node.js, and databases to become a full-stack developer.",
+        "image": "https://images.unsplash.com/photo-1498050108023-c5249f4df085",
+        "category": "Development"
+    },
+    {
+        "id": 2,
+        "title": "Advanced React & Next.js Mastery",
+        "instructor": "Sarah Johnson",
+        "duration": "18 hours",
+        "rating": 4.9,
+        "level": "Advanced",
+        "description": "Deep dive into React, hooks, performance optimization, and Next.js App Router.",
+        "image": "https://images.unsplash.com/photo-1633356122544-f134324a6cee",
+        "category": "Development"
+    },
+    {
+        "id": 3,
+        "title": "UI/UX Design Fundamentals",
+        "instructor": "Emily Clark",
+        "duration": "12 hours",
+        "rating": 4.6,
+        "level": "Beginner",
+        "description": "Understand design principles, wireframing, and user-centered design techniques.",
+        "image": "https://images.unsplash.com/photo-1581291518857-4e27b48ff24e",
+        "category": "Design"
+    },
+    {
+        "id": 4,
+        "title": "Graphic Design with Photoshop & Illustrator",
+        "instructor": "David Miller",
+        "duration": "15 hours",
+        "rating": 4.7,
+        "level": "Intermediate",
+        "description": "Master digital design tools and create stunning graphics and branding assets.",
+        "image": "https://images.unsplash.com/photo-1522542550221-31fd19575a2d",
+        "category": "Design"
+    },
+    {
+        "id": 5,
+        "title": "Digital Marketing Masterclass",
+        "instructor": "Michael Brown",
+        "duration": "14 hours",
+        "rating": 4.5,
+        "level": "Beginner",
+        "description": "Learn SEO, social media marketing, and online advertising strategies.",
+        "image": "https://images.unsplash.com/photo-1460925895917-afdab827c52f",
+        "category": "Marketing"
+    },
+    {
+        "id": 6,
+        "title": "SEO & Content Marketing Strategy",
+        "instructor": "Olivia Wilson",
+        "duration": "10 hours",
+        "rating": 4.4,
+        "level": "Intermediate",
+        "description": "Improve website ranking and traffic using modern SEO and content strategies.",
+        "image": "https://images.unsplash.com/photo-1557838923-2985c318be48",
+        "category": "Marketing"
+    },
+    {
+        "id": 7,
+        "title": "Python for Data Science",
+        "instructor": "James Anderson",
+        "duration": "22 hours",
+        "rating": 4.8,
+        "level": "Intermediate",
+        "description": "Analyze data, visualize insights, and build machine learning models with Python.",
+        "image": "https://images.unsplash.com/photo-1519389950473-47ba0277781c",
+        "category": "Data Science"
+    },
+    {
+        "id": 8,
+        "title": "Machine Learning A-Z",
+        "instructor": "Sophia Martinez",
+        "duration": "25 hours",
+        "rating": 4.9,
+        "level": "Advanced",
+        "description": "Comprehensive course on machine learning algorithms, models, and real-world applications.",
+        "image": "https://images.unsplash.com/photo-1509228627152-72ae9ae6848d",
+        "category": "Data Science"
+    },
+    {
+        "id": 9,
+        "title": "Mobile App Development with Flutter",
+        "instructor": "Daniel Lee",
+        "duration": "16 hours",
+        "rating": 4.7,
+        "level": "Intermediate",
+        "description": "Build cross-platform mobile apps using Flutter and Dart.",
+        "image": "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c",
+        "category": "Development"
+    },
+    {
+        "id": 10,
+        "title": "Cyber Security Basics",
+        "instructor": "Chris Evans",
+        "duration": "11 hours",
+        "rating": 4.5,
+        "level": "Beginner",
+        "description": "Understand cybersecurity fundamentals, threats, and protection techniques.",
+        "image": "https://images.unsplash.com/photo-1550751827-4bd374c3f58b",
+        "category": "Security"
+    },
+    {
+        "id": 11,
+        "title": "Cloud Computing with AWS",
+        "instructor": "Rachel Green",
+        "duration": "19 hours",
+        "rating": 4.6,
+        "level": "Intermediate",
+        "description": "Learn cloud infrastructure, deployment, and services using AWS.",
+        "image": "https://images.unsplash.com/photo-1451187580459-43490279c0fa",
+        "category": "Cloud"
+    },
+    {
+        "id": 12,
+        "title": "Time Management & Productivity",
+        "instructor": "Robert King",
+        "duration": "8 hours",
+        "rating": 4.3,
+        "level": "Beginner",
+        "description": "Boost productivity with effective time management and focus strategies.",
+        "image": "https://images.unsplash.com/photo-1506784983877-45594efa4cbe",
+        "category": "Personal Development"
+    }
+]

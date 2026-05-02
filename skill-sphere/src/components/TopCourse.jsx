@@ -1,13 +1,14 @@
 import { Suspense } from 'react';
 import CourseCard from './CourseCard';
 import TopCourseList from './TopCourseList';
+import coursesData from '@/data/course.json';
 
 const TopCourse = async () => {
     
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-    const response = await fetch(`${baseUrl}/course.json`);
-    const courses = await response.json();
-    const topCourses = [...courses].sort((a, b) => b.rating - a.rating).slice(0, 3);
+    // const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+    // const response = await fetch(`${baseUrl}/course.json`);
+    // const courses = await response.json();
+    const topCourses = [...coursesData].sort((a, b) => b.rating - a.rating).slice(0, 3);
 
     return (
         <div className='container mx-auto pt-25'>

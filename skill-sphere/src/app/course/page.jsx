@@ -1,18 +1,27 @@
 "use client";
 
+import AllCourseList from "@/components/AllCourseList";
 import CourseCard from "@/components/CourseCard";
 import Link from "next/link";
-import { useEffect, useState } from "react";
+import { Suspense, useEffect, useState } from "react";
 
 const CoursePage = () => {
     const [courses, setCourses] = useState([]);
     const [search, setSearch] = useState("");
+    const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
         const fetchCourses = async () => {
-            const res = await fetch('https://skill-sphere-munaimpro.vercel.app/course.json');
-            const data = await res.json();
-            setCourses(data);
+            setIsLoading(true);
+            try {
+                const res = await fetch('https://skill-sphere-munaimpro.vercel.app/course.json');
+                const data = await res.json();
+                setCourses(data);
+            } catch (error) {
+                console.error("Error fetching courses:", error);
+            } finally {
+                setIsLoading(false);
+            }
         };
 
         fetchCourses();
@@ -66,21 +75,20 @@ const CoursePage = () => {
             </div>
 
             {/* Page Content */}
-            <div className="container mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8 mb-25">
-                {filteredCourses.length === 0 ? (
-                    <div className="py-20 text-center col-span-3">
-                        <h2 className="text-2xl font-semibold text-gray-600">
-                            No courses available
-                        </h2>
-                        <p className="text-gray-400 mt-2">
-                            Try searching with a different keyword.
-                        </p>
-                    </div>
-                ) : (
-                    filteredCourses.map(course => (
-                        <CourseCard key={course.id} course={course} />
-                    ))
-                )}
+            <div className="container mx-auto mb-25">
+                <div className="text-center">
+                    {/* <Suspense fallback={<span className="text-gray-500 my-25 loading loading-bars loading-lg"></span>}>
+                        <AllCourseList filteredCourses={filteredCourses} />
+                    </Suspense> */}
+
+                    {isLoading ? (
+                        <div className="py-20 flex justify-center">
+                            <span className="text-gray-500 my-25 loading loading-bars loading-lg"></span>
+                        </div>
+                    ) : (
+                        <AllCourseList filteredCourses={filteredCourses} />
+                    )}
+                </div>
             </div>
         </div>
     );

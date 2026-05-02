@@ -14,8 +14,9 @@ const CoursePage = () => {
         const fetchCourses = async () => {
             setIsLoading(true);
             try {
-                const res = await fetch('https://skill-sphere-munaimpro.vercel.app/course.json');
-                const data = await res.json();
+                const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+                const response = await fetch(`${baseUrl}/course.json`);
+                const data = await response.json();
                 setCourses(data);
             } catch (error) {
                 console.error("Error fetching courses:", error);

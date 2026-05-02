@@ -77,9 +77,9 @@ const CoursePage = () => {
             {/* Page Content */}
             <div className="container mx-auto mb-25">
                 <div className="text-center">
-                    {/* <Suspense fallback={<span className="text-gray-500 my-25 loading loading-bars loading-lg"></span>}>
+                    <Suspense fallback={<span className="text-gray-500 my-25 loading loading-bars loading-lg"></span>}>
                         <AllCourseList filteredCourses={filteredCourses} />
-                    </Suspense> */}
+                    </Suspense>
 
                     {isLoading ? (
                         <div className="py-20 flex justify-center">

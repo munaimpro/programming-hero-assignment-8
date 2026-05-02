@@ -11,7 +11,7 @@ const CourseCard = ({ course }) => {
                 <div className="badge badge-soft badge-primary absolute top-3 right-3 rounded-full font-medium">{course.category}</div>
             </figure>
             <div className="card-body flex flex-col flex-grow">
-                <h2 className="card-title font-medium text-[#082a5e]">{course.title}</h2>
+                <h2 className="text-start card-title font-medium text-[#082a5e]">{course.title}</h2>
                 <div className="text-[#39557e] flex gap-2 items-center"><UserIcon></UserIcon> {course.instructor}</div>
                 <div className="text-[#39557e] flex gap-2 items-center">
                     <StarIcon></StarIcon>

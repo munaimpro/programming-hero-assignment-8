@@ -5,7 +5,7 @@ import { Clock, Star, User2Icon } from "lucide-react";
 const DetailsPage = async ({params}) => {
 
     const { courseId } = await params;
-    const response = await fetch(`https://skill-sphere-munaimpro.vercel.app/course.json`);
+    const response = await fetch(`http://localhost:3000/course.json`);
     const courses = await response.json();
     const singleCourse = courses.find(course => course.id == parseInt(courseId));
 

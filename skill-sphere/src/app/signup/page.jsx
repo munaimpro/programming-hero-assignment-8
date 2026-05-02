@@ -6,6 +6,7 @@ import { Eye, EyeClosed } from "lucide-react";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
 
 const SignupPage = () => {
     const router = useRouter();
@@ -27,11 +28,11 @@ const SignupPage = () => {
         // console.log(res, error)
 
         if (error) {
-            alert(error.message);
+            toast.error(error.message);
         }
 
         if (res) {
-            alert("Signup successfull");
+            toast.success("Signup successfull");
             router.push("/");
             router.refresh();
         }

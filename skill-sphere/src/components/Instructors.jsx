@@ -1,4 +1,6 @@
+'use client'
 import Image from "next/image";
+import { motion } from "framer-motion";
 
 const Instructors = () => {
     const instructors = [
@@ -54,10 +56,7 @@ const Instructors = () => {
             {/* Section Content */}
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 {instructors.map((instructor, index) => (
-                    <div
-                        key={index}
-                        className="card bg-base-200 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 group"
-                    >
+                    <motion.div initial={{ opacity: 0, y: 70 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }} key={index} className="card bg-base-200 shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-2 group">
                         <figure className="px-6 pt-6">
                             <div className="avatar">
                                 <div className="w-32 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
@@ -88,12 +87,12 @@ const Instructors = () => {
                             </div>
 
                             <div className="card-actions mt-4 w-full">
-                                <button className="btn btn-primary shadow-none btn-block btn-sm md:btn-md">
+                                <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} transition={{ duration: 0.4 }} className="btn btn-primary shadow-none btn-block btn-sm md:btn-md">
                                     View Profile
-                                </button>
+                                </motion.button>
                             </div>
                         </div>
-                    </div>
+                    </motion.div>
                 ))}
             </div>
         </div>

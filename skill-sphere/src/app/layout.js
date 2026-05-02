@@ -2,6 +2,7 @@ import { Geist, Geist_Mono, Inter } from "next/font/google";
 import "./globals.css";
 import NavBar from "@/components/shared/NavBar";
 import Footer from "@/components/shared/Footer";
+import { ToastContainer } from "react-toastify";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -34,6 +35,7 @@ export default function RootLayout({ children }) {
         <NavBar></NavBar>
         {children}
         <Footer></Footer>
+        <ToastContainer></ToastContainer>
       </body>
     </html>
   );

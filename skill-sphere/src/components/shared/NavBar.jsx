@@ -4,8 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import userAvater from '@/assets/avater.webp';
 import NavLink from "./NavLink";
-
-
+import { motion } from "framer-motion";
 
 const NavBar = () => {
 
@@ -25,7 +24,7 @@ const NavBar = () => {
     </>
 
     return (
-        <div className="navbar bg-base-100 shadow-sm">
+        <motion.div initial={{ y: -100 }} animate={{ y: 0 }} transition={{ duration: 0.4 }} className="navbar bg-base-100 shadow-sm">
             <div className="container mx-auto flex">
                 <div className="navbar-start">
                     <div className="dropdown">
@@ -65,7 +64,7 @@ const NavBar = () => {
                     
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 };
 

@@ -6,6 +6,7 @@ import { useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { FcGoogle } from "react-icons/fc";
+import { toast } from "react-toastify";
 
 const LoginPage = () => {
     const searchParams = useSearchParams();
@@ -24,11 +25,11 @@ const LoginPage = () => {
         });
 
         if (error) {
-            alert(error.message);
+            toast.error(error.message);
         }
 
         if (res) {
-            alert("Login Successfull");
+            toast.success("Login Successfull");
         }
     }
 
@@ -82,7 +83,7 @@ const LoginPage = () => {
 
                 <p className='py-6 text-[16px] text-[#39557e] mt-6'>
                     Don&apos;t have an account?
-                    <Link className="text-[#082a5e] font-bold" href={'/signup'}>Sign Up</Link>
+                    <Link className="text-[#082a5e] font-bold" href={'/signup'}> Sign Up</Link>
                 </p>
             </div>
         </div>

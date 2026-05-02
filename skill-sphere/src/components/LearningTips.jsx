@@ -1,5 +1,4 @@
 import { Book, Clock } from 'lucide-react';
-import React from 'react';
 
 const LearningTips = () => {
     return (

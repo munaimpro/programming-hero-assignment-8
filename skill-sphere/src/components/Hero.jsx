@@ -1,5 +1,6 @@
-import React from 'react';
-import bannerImage from '@/assets/banner.png'
+'use client'
+import bannerImage from '@/assets/banner.png';
+import { motion } from "framer-motion";
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -10,12 +11,17 @@ const Hero = () => {
                 <div className="hero-content flex-col lg:flex-row-reverse lg:gap-10">
                     <Image src={bannerImage} alt="Banner"></Image>
                     <div className='w-full lg:w-2xl'>
-                        <h1 className="text-5xl font-bold text-[#082a5e]">Learn <span className='text-[#422ad5]'>Skills</span> From Our Top Instructors</h1>
-                        <p className="py-6 text-[16px] text-gray-500">
+                            <motion.h1
+                                initial={{ opacity: 0, y: 40 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8 }}        className="text-5xl font-bold text-[#082a5e]">Learn <span className='text-[#422ad5]'>Skills</span> From Our Top Instructors</motion.h1>
+                        <motion.p initial={{ opacity: 0, y: 40 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }} className="py-6 text-[16px] text-gray-500">
                             Learn outstanding and on-demand skills from our best, and well-qualified instructors with outstanding guidelines.
-                        </p>
+                        </motion.p>
                         <Link href={'/course'}>
-                            <button className="btn btn-primary btn-lg uppercase">Explore Courses</button>
+                            <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} transition={{ duration: 0.4 }} className="btn btn-primary btn-lg uppercase">Explore Courses</motion.button>
                         </Link>
                     </div>
                 </div>

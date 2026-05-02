@@ -2,7 +2,6 @@
 import AllCourseList from "@/components/AllCourseList";
 import Link from "next/link";
 import { Suspense, useEffect, useState } from "react";
-import coursesData from '@/data/course.json';
 
 const CoursePage = () => {
     const [courses, setCourses] = useState([]);
@@ -13,10 +12,10 @@ const CoursePage = () => {
         const fetchCourses = async () => {
             setIsLoading(true);
             try {
-                // const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-                // const response = await fetch(`${baseUrl}/course.json`);
-                // const data = await response.json();
-                setCourses(coursesData);
+                const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
+                const response = await fetch(`${baseUrl}/course.json`);
+                const data = await response.json();
+                setCourses(data);
             } catch (error) {
                 console.error("Error fetching courses:", error);
             } finally {

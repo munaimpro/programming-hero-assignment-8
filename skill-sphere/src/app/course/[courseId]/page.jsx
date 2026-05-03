@@ -13,7 +13,7 @@ const DetailsPage = async ({params}) => {
         <div>
             {/* Page Heading */}
             <div className="relative py-16 bg-cover bg-center mb-25 bg-[#082a5e]">
-                <div className="relative container mx-auto text-white">
+                <div className="relative container mx-auto text-white px-5 lg:px-0">
                     <div className="badge bg-[#04bc53] font-medium text-white border-[#04bc53] rounded-full mb-4">{singleCourse.category}</div>
                     <h2 className="max-w-2xl leading-14 text-5xl font-bold mb-3">{singleCourse.title}</h2>
                     <p className="text-white/60 mb-8">{singleCourse.description}</p>
@@ -43,7 +43,7 @@ const DetailsPage = async ({params}) => {
             </div>
 
             {/* Page Content */}
-            <div className="container mx-auto mb-25">
+            <div className="container mx-auto mb-25 px-5 lg:px-0">
                 <div className="grid grid-cols-1 lg:grid-cols-12 justify-between">
                     <Curriculum></Curriculum>
                     <CourseDetails singleCourse={singleCourse}></CourseDetails>

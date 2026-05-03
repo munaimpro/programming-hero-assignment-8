@@ -39,7 +39,7 @@ const Instructors = () => {
     ];
 
     return (
-        <div className="container mx-auto bg-base-100 py-25">
+        <div className="container mx-auto bg-base-100 py-25 px-5 lg:px-0">
             {/* Section Heading */}
             <div className="flex justify-between items-end mb-12">
                 <div>

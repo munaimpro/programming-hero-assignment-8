@@ -38,7 +38,7 @@ const CoursePage = () => {
                 style={{ backgroundImage: "url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f')" }}>
                 <div className="absolute inset-0 bg-[#082a5e]/60"></div>
 
-                <div className="relative container mx-auto text-white">
+                <div className="relative container mx-auto text-white px-5 lg:px-0">
                     <h2 className="text-5xl font-bold mb-3">Our Courses</h2>
                     <ul className="flex gap-2 font-medium">
                         <li>Home</li>
@@ -51,8 +51,8 @@ const CoursePage = () => {
             </div>
 
             {/* Search Bar */}
-            <div className="container mx-auto flex justify-between py-5">
-                <p className="text-gray-500">
+            <div className="container mx-auto flex flex-col lg:flex-row justify-center gap-3 lg:gap-0 lg:justify-between py-5 items-center mb-4 lg:mb-0 px-5 lg:px-0">
+                <p className="text-gray-500 max-h-fit">
                     We found {filteredCourses.length} courses for you
                 </p>
                 
@@ -74,12 +74,8 @@ const CoursePage = () => {
             </div>
 
             {/* Page Content */}
-            <div className="container mx-auto mb-25">
+            <div className="container mx-auto mb-25 px-5 lg:px-0">
                 <div className="text-center">
-                    <Suspense fallback={<span className="text-gray-500 my-25 loading loading-bars loading-lg"></span>}>
-                        <AllCourseList filteredCourses={filteredCourses} />
-                    </Suspense>
-
                     {isLoading ? (
                         <div className="py-20 flex justify-center">
                             <span className="text-gray-500 my-25 loading loading-bars loading-lg"></span>

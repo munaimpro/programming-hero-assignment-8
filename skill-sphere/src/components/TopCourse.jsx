@@ -10,7 +10,7 @@ const TopCourse = async () => {
     const topCourses = [...courses].sort((a, b) => b.rating - a.rating).slice(0, 3);
 
     return (
-        <div className='container mx-auto pt-25'>
+        <div className='container mx-auto pt-25 px-5 lg:px-0'>
             {/* Section Heading */}
             <div className='mb-8'>
                 <h2 className="text-4xl font-bold text-[#082a5e]">Our <span className='text-[#422ad5]'>Featured</span> Courses</h2>

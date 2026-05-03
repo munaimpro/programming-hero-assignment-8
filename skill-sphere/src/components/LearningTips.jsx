@@ -2,7 +2,7 @@ import { Book, Clock } from 'lucide-react';
 
 const LearningTips = () => {
     return (
-        <div className='container mx-auto pt-25'>
+        <div className='container mx-auto pt-25 px-5 lg:px-0'>
             {/* Section Heading */}
             <div className='mb-8 text-center'>
                 <h2 className="text-4xl font-bold text-[#082a5e]">Learning <span className='text-[#422ad5]'>Tips</span></h2>

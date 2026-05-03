@@ -109,7 +109,7 @@ function Curriculum() {
     };
 
     return (
-        <div className="p-6 bg-white lg:col-span-8 w-full">
+        <div className="py-8 bg-white lg:col-span-8 w-full">
             <h1 className="text-3xl font-bold text-[#082a5e] mb-6">Course Curriculum</h1>
 
             <div className="flex flex-col gap-4">

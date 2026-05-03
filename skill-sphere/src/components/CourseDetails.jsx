@@ -15,7 +15,7 @@ const CourseDetails = ({ singleCourse }) => {
                     {/* Play Button Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center">
                         <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg cursor-pointer transition-transform group-hover:scale-110">
-                            <Play className="fill-blue-600 text-blue-600 w-6 h-6 ml-1" />
+                            <Play className="fill-primary text-primary w-6 h-6 ml-1" />
                         </div>
                     </div>
                 </div>
@@ -32,7 +32,7 @@ const CourseDetails = ({ singleCourse }) => {
                 </div>
 
                 {/* Action Button */}
-                <button className="w-full cursor-pointer bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-4 rounded-md transition-colors mb-6 uppercase tracking-wider text-sm">
+                <button className="btn btn-primary btn-block font-bold py-3 px-4 rounded-md mb-6 uppercase text-sm">
                     Enroll This Now
                 </button>
 
@@ -54,7 +54,7 @@ const CourseDetails = ({ singleCourse }) => {
                                 <FileText className="w-5 h-5 text-slate-400" />
                                 <span className="text-sm font-medium">Estimated Seat</span>
                             </div>
-                            <span className="text-sm text-blue-500 font-medium font-mono">250</span>
+                            <span className="text-sm text-slate-500 font-medium font-mono">250</span>
                         </div>
 
                         <div className="flex items-center justify-between py-2 border-b border-slate-100">
@@ -62,7 +62,7 @@ const CourseDetails = ({ singleCourse }) => {
                                 <Users className="w-5 h-5 text-slate-400" />
                                 <span className="text-sm font-medium">Joined</span>
                             </div>
-                            <span className="text-sm text-blue-500 font-medium font-mono">190</span>
+                            <span className="text-sm text-slate-500 font-medium font-mono">190</span>
                         </div>
 
                         <div className="flex items-center justify-between py-2 border-b border-slate-100">
@@ -70,15 +70,15 @@ const CourseDetails = ({ singleCourse }) => {
                                 <Tag className="w-5 h-5 text-slate-400"/>
                                 <span className="text-sm font-medium">Level</span>
                             </div>
-                            <span className="text-sm text-blue-500 font-medium">{singleCourse.level}</span>
+                            <span className="text-sm text-slate-500 font-medium">{singleCourse.level}</span>
                         </div>
 
-                        <div className="flex items-center justify-between py-2 border-b border-slate-100">
+                        <div className="flex items-center justify-between py-2">
                             <div className="flex items-center gap-3 text-slate-600">
                                 <Zap className="w-5 h-5 text-slate-400" />
                                 <span className="text-sm font-medium">Category</span>
                             </div>
-                            <span className="text-sm text-blue-500 font-medium">{singleCourse.category}</span>
+                            <span className="text-sm text-slate-500 font-medium">{singleCourse.category}</span>
                         </div>
                     </div>
                 </div>

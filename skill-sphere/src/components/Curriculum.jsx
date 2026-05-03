@@ -1,5 +1,4 @@
 "use client";
-
 import { useState } from 'react';
 import { PlayCircle, Lock } from 'lucide-react';
 
@@ -126,7 +125,7 @@ function Curriculum() {
                         >
                             <input type="checkbox" checked={isOpen} onChange={() => handleToggle(section.id)}/>
 
-                            <div className={`collapse-title text-lg font-medium flex items-center transition-colors ${isOpen ? 'text-slate-900' : 'text-blue-600'
+                            <div className={`collapse-title text-lg font-medium flex items-center transition-colors ${isOpen ? 'text-slate-900' : 'text-primary'
                                     }`} >
                                 {section.title}
                             </div>

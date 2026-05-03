@@ -34,7 +34,7 @@ const CoursePage = () => {
     return (
         <div>
             {/* Page Heading */}
-            <div className="relative py-16 bg-cover bg-center mb-25"
+            <div className="relative py-16 mt-17.5 bg-cover bg-center mb-25"
                 style={{ backgroundImage: "url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f')" }}>
                 <div className="absolute inset-0 bg-[#082a5e]/60"></div>
 

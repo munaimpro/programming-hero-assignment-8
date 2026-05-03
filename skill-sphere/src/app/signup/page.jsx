@@ -49,7 +49,7 @@ const SignupPage = () => {
     }
 
     return (
-        <div className='container mx-auto min-h-[80vh] flex justify-center items-center py-10'>
+        <div className='container mx-auto min-h-[80vh] flex justify-center items-center py-10 mt-12 px-5 lg:px-0'>
             <div className='p-10 rounded-xl border-2 border-base-300 bg-white'>
                 <h3 className='font-bold text-3xl text-center mb-6 text-[#082a5e]'>Signup your account</h3>
                 

@@ -12,12 +12,12 @@ const DetailsPage = async ({params}) => {
     return (
         <div>
             {/* Page Heading */}
-            <div className="relative py-16 bg-cover bg-center mb-25 bg-[#082a5e]">
+            <div className="relative py-16 mt-16.5 bg-cover bg-center mb-25 bg-[#082a5e]">
                 <div className="relative container mx-auto text-white px-5 lg:px-0">
                     <div className="badge bg-[#04bc53] font-medium text-white border-[#04bc53] rounded-full mb-4">{singleCourse.category}</div>
                     <h2 className="max-w-2xl leading-14 text-5xl font-bold mb-3">{singleCourse.title}</h2>
                     <p className="text-white/60 mb-8">{singleCourse.description}</p>
-                    <div className="flex gap-5 items-center text-white/60">
+                    <div className="flex flex-wrap gap-5 items-center text-white/60">
                         <div className="flex items-center gap-1">
                             <span className="text-white"><User2Icon></User2Icon></span>
                             <span>{singleCourse.instructor}</span>
@@ -44,7 +44,7 @@ const DetailsPage = async ({params}) => {
 
             {/* Page Content */}
             <div className="container mx-auto mb-25 px-5 lg:px-0">
-                <div className="grid grid-cols-1 lg:grid-cols-12 justify-between">
+                <div className="grid grid-cols-1 lg:grid-cols-12 justify-between gap-8">
                     <Curriculum></Curriculum>
                     <CourseDetails singleCourse={singleCourse}></CourseDetails>
                 </div>

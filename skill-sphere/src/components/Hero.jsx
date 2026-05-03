@@ -9,7 +9,7 @@ const Hero = () => {
     return (
         <div className="hero bg-base-200 min-h-screen">
             <div className='container mx-auto'>
-                <div className="hero-content flex-col lg:flex-row-reverse lg:gap-10 lg:pb-0">
+                <div className="hero-content flex-col lg:flex-row-reverse lg:gap-10 lg:pb-0 py-25">
                     <Image src={bannerImage} alt="Banner"></Image>
                     <div className='w-full lg:w-2xl'>
                             <motion.h1

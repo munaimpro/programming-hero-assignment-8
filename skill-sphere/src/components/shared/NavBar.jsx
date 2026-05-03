@@ -24,7 +24,7 @@ const NavBar = () => {
     </>
 
     return (
-        <motion.div initial={{ y: -100 }} animate={{ y: 0 }} transition={{ duration: 0.4 }} className="navbar bg-base-100 shadow-sm">
+        <motion.div initial={{ y: -100 }} animate={{ y: 0 }} transition={{ duration: 0.4 }} className="navbar bg-base-100 shadow-sm fixed top-0 left-0 w-full z-50">
             <div className="container mx-auto flex">
                 <div className="navbar-start">
                     <div className="dropdown">

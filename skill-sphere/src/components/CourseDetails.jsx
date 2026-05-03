@@ -1,17 +1,14 @@
 import React from 'react';
-import { Clock, FileText, Users, BarChart2, Zap, Share2, Facebook, Twitter, Instagram, Youtube, Play, Tag } from 'lucide-react';
+import { Clock, FileText, Users, Zap, Play, Tag } from 'lucide-react';
+import Image from 'next/image';
 
 const CourseDetails = ({ singleCourse }) => {
     return (
-        <div className="lg:col-span-4 w-full bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden">
+        <div className="lg:col-span-4 w-full bg-white rounded-lg border border-slate-200 shadow-sm overflow-hidden h-fit">
             {/* Video Thumbnail Section */}
             <div className="relative group p-4 pb-0">
                 <div className="relative rounded-lg overflow-hidden h-48">
-                    <img
-                        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=500&auto=format&fit=crop"
-                        alt="Course Preview"
-                        className="w-full h-full object-cover"
-                    />
+                    <Image src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=500&auto=format&fit=crop" alt="Course Preview" className="w-full h-full object-cover" width={100} height={100}/>
                     {/* Play Button Overlay */}
                     <div className="absolute inset-0 flex items-center justify-center">
                         <div className="w-14 h-14 bg-white rounded-full flex items-center justify-center shadow-lg cursor-pointer transition-transform group-hover:scale-110">

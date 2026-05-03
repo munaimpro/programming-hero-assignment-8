@@ -17,8 +17,8 @@ const CourseCard = ({ course }) => {
                     <StarIcon></StarIcon>
                     {course.rating}
                 </div>
-                <div className="divider py-4"></div>
-                <div className="card-actions justify-end mt-auto">
+                <div className="divider py-4 mt-auto"></div>
+                <div className="card-actions justify-end">
                     <Link href={`/course/${course.id}`}>
                         <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} transition={{ duration: 0.4 }} className="btn btn-primary shadow-none">View Details</motion.button>
                     </Link>

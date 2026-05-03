@@ -5,20 +5,20 @@ import { motion } from "framer-motion";
 const Instructors = () => {
     const instructors = [
         {
-            name: "Marcus Thorne",
-            role: "Lead Solutions Architect",
-            image: "https://i.pravatar.cc/150?u=sarah",
-            students: "15k+",
-            courses: 18,
-            specialty: "Cloud Infrastructure"
-        },
-        {
             name: "Elena Rodriguez",
             role: "Senior UX/UI Engineer",
             image: "https://i.pravatar.cc/150?u=elena",
             students: "22k+",
             courses: 14,
             specialty: "Product Design"
+        },
+        {
+            name: "Marcus Thorne",
+            role: "Lead Solutions Architect",
+            image: "https://i.pravatar.cc/150?u=sarah",
+            students: "15k+",
+            courses: 18,
+            specialty: "Cloud Infrastructure"
         },
         {
             name: "Kenji Tanaka",

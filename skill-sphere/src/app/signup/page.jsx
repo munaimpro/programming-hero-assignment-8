@@ -28,7 +28,8 @@ const SignupPage = () => {
         // console.log(res, error)
 
         if (error) {
-            toast.error(error.message);
+            console.log(error.message);
+            toast.error("Invalid Input");
         }
 
         if (res) {

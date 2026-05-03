@@ -15,7 +15,7 @@ const SignupPage = () => {
 
     const handleRegisterSubmit = async (data) => {
         const { name, email, photo, password } = data;
-        console.log(data)
+        // console.log(data)
 
         const { data:res, error } = await authClient.signUp.email({
             name: name, // required

@@ -19,7 +19,7 @@ const LearningTips = () => {
                     <div className="space-y-4">
                         {/* Item */}
                         <div className="flex items-start gap-4">
-                            <div className="text-primary text-xl">✔</div>
+                            <div className="text-green-500 text-xl">✔</div>
                             <div>
                                 <h4 className="font-semibold">Active Recall</h4>
                                 <p className="text-sm text-gray-500">Test yourself instead of rereading notes.</p>
@@ -27,7 +27,7 @@ const LearningTips = () => {
                         </div>
 
                         <div className="flex items-start gap-4">
-                            <div className="text-primary text-xl">✔</div>
+                            <div className="text-green-500 text-xl">✔</div>
                             <div>
                                 <h4 className="font-semibold">Spaced Repetition</h4>
                                 <p className="text-sm text-gray-500">Review information over time intervals.</p>
@@ -35,7 +35,7 @@ const LearningTips = () => {
                         </div>
 
                         <div className="flex items-start gap-4">
-                            <div className="text-primary text-xl">✔</div>
+                            <div className="text-green-500 text-xl">✔</div>
                             <div>
                                 <h4 className="font-semibold">Take Notes</h4>
                                 <p className="text-sm text-gray-500">Write summaries to improve retention.</p>

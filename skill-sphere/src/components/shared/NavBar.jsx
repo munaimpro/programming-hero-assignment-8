@@ -52,7 +52,9 @@ const NavBar = () => {
                             <>
                                 <Image className="rounded-full" src={user?.image || userAvater} alt={user?.name || "User"} width={40} height={40} />
                                 
-                                    <Link onClick={async () => await authClient.signOut() } className="btn btn-primary shadow-none" href={'/login'}>Logout</Link>
+                                    <Link onClick={async () => await authClient.signOut()} className="btn btn-primary shadow-none rounded-full" href={'/login'}>
+                                        Logout
+                                    </Link>
                             </>
                         ): (
                             <>

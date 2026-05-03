@@ -1,6 +1,7 @@
 'use client'
 import bannerImage from '@/assets/banner.png';
 import { motion } from "framer-motion";
+import { ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -21,7 +22,10 @@ const Hero = () => {
                             Learn outstanding and on-demand skills from our best, and well-qualified instructors with outstanding guidelines.
                         </motion.p>
                         <Link href={'/course'}>
-                            <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} transition={{ duration: 0.4 }} className="btn btn-primary btn-lg uppercase">Explore Courses</motion.button>
+                            <motion.button whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} transition={{ duration: 0.4 }} className="btn btn-primary btn-lg uppercase">
+                                Explore Courses
+                                <ArrowRight className="w-5 h-5 ml-2" />
+                            </motion.button>
                         </Link>
                     </div>
                 </div>

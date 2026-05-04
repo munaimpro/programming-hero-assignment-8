@@ -34,6 +34,7 @@ const SignupPage = () => {
 
         if (res) {
             toast.success("Signup successfull");
+            router.refresh();
             setTimeout(() => {
                 router.push("/login");
             }, 3000);
